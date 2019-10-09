@@ -3,7 +3,7 @@ Ansible role for nodejs
 
 Installs NodeJS toolchain
 
-[![CircleCI](https://img.shields.io/circleci/build/github/mongodb-ansible-roles/ansible-role-nodejs/master?style=flat-square)](https://circleci.com/gh/mongodb-ansible-roles/ansible-role-nodejs)
+[![CircleCI](https://img.shields.io/circleci/build/github/mongodb-ansible-roles/ansible-role-nodejs-toolchain/master?style=flat-square)](https://circleci.com/gh/mongodb-ansible-roles/ansible-role-nodejs-toolchain)
 
 Requirements
 ------------
@@ -15,7 +15,7 @@ Role Variables
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-------:|:--------:|
-| name | desc | type | default | required |
+| nodejs\_toolchain\_version | Version of nodejs toolchain to install | string | "" | true |
 
 Dependencies
 ------------
@@ -28,8 +28,9 @@ Example Playbook
 ```yaml
 - hosts: all
   roles:
-    - role: ansible-role-nodejs
+    - role: ansible-role-nodejs-toolchain
       vars:
+        nodejs_toolchain_version: "v8.11.3"
 ```
 
 Development

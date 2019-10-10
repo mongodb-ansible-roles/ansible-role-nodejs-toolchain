@@ -1,4 +1,32 @@
 ---
+- name: Rename nodejs directory
+  become: true
+  command: mv {{ nodejs_toolchain_dest }}/{{ toolchain_top_level_directory }} {{ nodejs_toolchain_dest }}/node
+  args:
+    creates: "{{ nodejs_toolchain_dest }}/node"
+  when: toolchain_top_level_directory is defined
+
+- name: Create node symlink
+  become: true
+  file:
+    src: "{{ nodejs_toolchain_dest }}/node/bin/node"
+    dest: /usr/local/bin/node
+    state: link
+
+- name: Create npm symlink
+  become: true
+  file:
+    src: "{{ nodejs_toolchain_dest }}/node/bin/npm"
+    dest: /usr/local/bin/npm
+    state: link
+
+- name: Create npx symlink
+  become: true
+  file:
+    src: "{{ nodejs_toolchain_dest }}/node/bin/npx"
+    dest: /usr/local/bin/npx
+    state: link
+
 - include_tasks: setup-Debian.yml
   when: ansible_os_family == "Debian"
 

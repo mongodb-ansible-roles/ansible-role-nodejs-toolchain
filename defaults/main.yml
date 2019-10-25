@@ -1,4 +1,6 @@
 ---
 nodejs_toolchain_dest: /opt
+nodejs_toolchain_npmrc_dest: "~{{ nodejs_toolchain_user }}/.npmrc"
 nodejs_toolchain_version: ""
 nodejs_toolchain_url: https://s3.amazonaws.com/boxes.10gen.com/build/node-{{ nodejs_toolchain_version }}-{{ distro }}-x64.tar.gz
+nodejs_toolchain_user: ""

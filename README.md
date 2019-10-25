@@ -16,6 +16,7 @@ Role Variables
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-------:|:--------:|
 | nodejs\_toolchain\_version | Version of nodejs toolchain to install | string | "" | true |
+| nodejs\_toolchain\_user | User that will be using the nodejs toolchain | string | "" | false |
 
 Dependencies
 ------------

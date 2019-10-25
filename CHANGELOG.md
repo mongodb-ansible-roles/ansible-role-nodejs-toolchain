@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/compare/v1.1.0...v1.2.0) (2019-10-25)
+
+
+### Features
+
+* Added npmrc file for artifactory repo ([476f001](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/commit/476f0011613086f1cc72b0f1515df9d47f0c0b54))
+* Adding nodejs_toolchain_user variable ([2165604](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/commit/2165604a7630bd9662e5bc83ece8c5a729a5359a))
+
 # [1.1.0](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/compare/v1.0.0...v1.1.0) (2019-10-18)
 
 

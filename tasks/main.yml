@@ -27,6 +27,12 @@
     dest: /usr/local/bin/npx
     state: link
 
+- name: Copy npmrc file
+  become: true
+  template:
+    dest: "{{ nodejs_toolchain_npmrc_dest }}"
+    src: npmrc.j2
+
 - include_tasks: setup-Debian.yml
   when: ansible_os_family == "Debian"
 

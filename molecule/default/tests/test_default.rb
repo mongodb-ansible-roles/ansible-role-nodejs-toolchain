@@ -23,3 +23,7 @@ end
 describe command('npx --version') do
   its('stdout') { should eq "9.7.1\n" }
 end
+
+describe file('/root/.npmrc') do
+  it { should exist }
+end

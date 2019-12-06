@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/compare/v1.2.0...v1.3.0) (2019-12-06)
+
+
+### Features
+
+* Added versioning capability ([ec09d3f](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/commit/ec09d3f777c0d8868ed49e2e4195737b3bb25593))
+
 # [1.2.0](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/compare/v1.1.0...v1.2.0) (2019-10-25)
 
 

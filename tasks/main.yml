@@ -1,29 +1,42 @@
 ---
-- name: Rename nodejs directory
+- name: Remove old toolchain
   become: true
-  command: mv {{ nodejs_toolchain_dest }}/{{ toolchain_top_level_directory }} {{ nodejs_toolchain_dest }}/node
-  args:
-    creates: "{{ nodejs_toolchain_dest }}/node"
-  when: toolchain_top_level_directory is defined
+  file:
+    path: "{{ nodejs_toolchain_final_dest }}"
+    state: absent
+  when:
+    - toolchain_archive_contents.changed
+
+- name: Move nodejs directory from tmp to opt
+  become: true
+  command: mv /tmp/{{ toolchain_top_level_directory }} {{ nodejs_toolchain_final_dest }}
+  when:
+    - toolchain_archive_contents.changed
+
+- name: Create version file
+  become: true
+  copy:
+    content: "{{ nodejs_toolchain_version }}"
+    dest: "{{ nodejs_toolchain_final_dest }}/toolchain_version"
 
 - name: Create node symlink
   become: true
   file:
-    src: "{{ nodejs_toolchain_dest }}/node/bin/node"
+    src: "{{ nodejs_toolchain_final_dest }}/bin/node"
     dest: /usr/local/bin/node
     state: link
 
 - name: Create npm symlink
   become: true
   file:
-    src: "{{ nodejs_toolchain_dest }}/node/bin/npm"
+    src: "{{ nodejs_toolchain_final_dest }}/bin/npm"
     dest: /usr/local/bin/npm
     state: link
 
 - name: Create npx symlink
   become: true
   file:
-    src: "{{ nodejs_toolchain_dest }}/node/bin/npx"
+    src: "{{ nodejs_toolchain_final_dest }}/bin/npx"
     dest: /usr/local/bin/npx
     state: link
 
@@ -32,9 +45,3 @@
   template:
     dest: "{{ nodejs_toolchain_npmrc_dest }}"
     src: npmrc.j2
-
-- include_tasks: setup-Debian.yml
-  when: ansible_os_family == "Debian"
-
-- include_tasks: setup-Darwin.yml
-  when: ansible_os_family == "Darwin"

@@ -1,10 +1,10 @@
 ---
 dependencies:
   - role: ansible-role-toolchain
-    toolchain_creates_directory: "{{ nodejs_toolchain_dest }}/node"
-    toolchain_dest: "{{ nodejs_toolchain_dest }}"
-    toolchain_list_files: true
-    toolchain_url: "{{ nodejs_toolchain_url }}"
+    vars:
+      toolchain_final_dest: "{{ nodejs_toolchain_final_dest }}"
+      toolchain_url: "{{ nodejs_toolchain_url }}"
+      toolchain_version: "{{ nodejs_toolchain_version }}"
 galaxy_info:
   author: MongoDB
   description: Installs NodeJS toolchain

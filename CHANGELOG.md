@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/compare/v1.3.0...v1.4.0) (2020-01-14)
+
+
+### Features
+
+* Added redhat support and ppc support ([621b472](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/commit/621b4725ed212ea1a55311aecf61e650ed1fa5a9))
+
 # [1.3.0](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/compare/v1.2.0...v1.3.0) (2019-12-06)
 
 

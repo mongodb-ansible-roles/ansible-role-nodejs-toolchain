@@ -3,7 +3,8 @@ Ansible role for nodejs
 
 Installs NodeJS toolchain
 
-[![CircleCI](https://img.shields.io/circleci/build/github/mongodb-ansible-roles/ansible-role-nodejs-toolchain/master?style=flat-square)](https://circleci.com/gh/mongodb-ansible-roles/ansible-role-nodejs-toolchain)
+[![GitHub Actions](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/workflows/Molecule%20Test/badge.svg)](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/actions?query=workflow%3A%22Molecule+Test%22)
+[![GitHub Actions](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/workflows/Release/badge.svg)](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/actions?query=workflow%3A%22Release%22)
 
 Requirements
 ------------
@@ -33,19 +34,6 @@ Example Playbook
       vars:
         nodejs_toolchain_version: "v8.11.3"
 ```
-
-Development
------------
-
-Testing this role locally requires the CircleCI [Local CLI](https://circleci.com/docs/2.0/local-cli/).
-
-To install the CLI for macOS and Linux, invoke the following command:
-
-    $ curl -fLSs https://circle.ci/cli | DESTDIR=/usr/local/bin bash
-
-After installing the CLI, invoke the following command to run the Molecule tests:
-
-    $ make test
 
 License
 -------

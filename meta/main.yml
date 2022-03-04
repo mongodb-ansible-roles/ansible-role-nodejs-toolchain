@@ -6,7 +6,8 @@ dependencies:
       toolchain_url: "{{ nodejs_toolchain_url }}"
       toolchain_version: "{{ nodejs_toolchain_version }}"
 galaxy_info:
-  author: MongoDB
+  role_name: ansible_role_nodejs_toolchain
+  author: mongodb
   description: Installs NodeJS toolchain
   license: Apache
   min_ansible_version: 2.8

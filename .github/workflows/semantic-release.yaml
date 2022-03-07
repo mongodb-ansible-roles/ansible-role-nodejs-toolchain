@@ -10,6 +10,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
+      - run: npm install -D @semantic-release/changelog@6.0.1 @semantic-release/git@10.0.1
       - env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         name: Run automated package publishing

@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/compare/v1.4.0...v1.5.0) (2022-03-07)
+
+
+### Bug Fixes
+
+* fix semantic releases ([5a36dab](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/commit/5a36dab40f51c930239f858772fcd97d29b8a33f))
+* install npm dependencies for semantic release ([421a517](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/commit/421a5173dedbced8d020818baa01f60e940336c0))
+
+
+### Features
+
+* **BUILD-14755:** add support for s390x and arm64 ([c23d4ba](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/commit/c23d4ba23d93c1f417580dde1ead6e628f6726a3))
+
 # [1.4.0](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/compare/v1.3.0...v1.4.0) (2020-01-14)
 
 

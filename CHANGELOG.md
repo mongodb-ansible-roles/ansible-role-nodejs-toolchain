@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/compare/v1.5.0...v1.6.0) (2022-04-26)
+
+
+### Features
+
+* variable for setting artifactory base url ([d436a57](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/commit/d436a572c5d66573df199da0569e6f584a436d8d))
+
 # [1.5.0](https://github.com/mongodb-ansible-roles/ansible-role-nodejs-toolchain/compare/v1.4.0...v1.5.0) (2022-03-07)
 
 

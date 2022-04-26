@@ -1,4 +1,5 @@
 ---
+nodejs_toolchain_artifactory_base_url: https://artifactory.corp.mongodb.com
 nodejs_toolchain_final_dest: /opt/node
 nodejs_toolchain_npmrc_dest: "~{{ nodejs_toolchain_user }}/.npmrc"
 nodejs_toolchain_version: ""
